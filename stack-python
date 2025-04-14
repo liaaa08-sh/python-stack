@@ -1,0 +1,30 @@
+class Stack:
+ def __init__(self):
+    self.items = []
+ 
+ def push(self, item):
+    self.items.append(item)
+ 
+ def pop(self):
+    if not self.is_empty():
+        return self.items.pop()
+    return None
+
+ def peek(self):
+    if not self.is_empty():
+        return self.items[-1]
+    return None
+ 
+ def is_empty(self):
+    return len(self.items) == 0
+def size(self):
+    return len(self.items)
+
+# Pengujian
+stack = Stack()
+stack.push("Buku1")
+stack.push("Buku2")
+print("Peek:", stack.peek()) # Output: Buku2
+print("Pop:", stack.pop()) # Output: Buku2
+print("Is empty?", stack.is_empty()) # Output: False
+print("Size:", stack.size()) # Output: 1
